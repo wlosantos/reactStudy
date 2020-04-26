@@ -71,6 +71,7 @@
       //   }
       // }
 
+/* // Introdução ao conceito de state
       class App extends React.Component{
 
         constructor(){
@@ -87,6 +88,36 @@
             <div className='container' style={{padding:'20px'}}>
               <p>Sistema: {this.state.sistema}</p>
               <p>Versão: <small> {this.state.versao} </small></p>
+            </div>
+          );
+        }
+      }
+*/
+
+// Introdução aos Eventos no React
+      class App extends React.Component{
+
+        constructor(props){
+          super(props);
+
+          this.state = {
+            name: 'Wendel Lopes dos Santos'
+          }
+
+          this.cmd_click = this.cmd_click.bind(this)
+        }
+
+        cmd_click(){
+          this.setState({name: 'Nadia Nunes dos Santos'});
+        }
+
+        render(){
+          return(
+            <div className='container' style={{padding: '20px'}}>
+              <p>Nome: {this.state.name}</p>
+              <button className='button is-primary' onClick={this.cmd_click}>
+                Click
+              </button>
             </div>
           );
         }

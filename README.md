@@ -123,5 +123,40 @@
 > }
 > ```
 >
-> 
+> >Obs.: Quando utilizamos a propriedade { props } seu valor não poderá ser alterado dinamicamente. Ao contrário do { state } pode ser alterado dinamicamente.
 
+10. Introdução ao Eventos no React.
+
+>
+>
+>```jsx
+>class App extends React.Component{
+>
+>  constructor(props){
+>    super(props);
+>
+>    this.state = {
+>      name: 'Wendel Lopes dos Santos'
+>    }
+>
+>    this.cmd_click = this.cmd_click.bind(this) //Ligação do evento click a class
+>  }
+>  // Função evento click 
+>  cmd_click(){
+>    this.setState({name: 'Nadia Nunes dos Santos'});
+>  }
+>
+>  render(){
+>    return(
+>      <div className='container' style={{padding: '20px'}}>
+>        <p>Nome: {this.state.name}</p>
+>        <button className='button is-primary' onClick={this.cmd_click}>
+>          Click
+>        </button>
+>      </div>
+>    );
+>  }
+>}
+>```
+>
+>
