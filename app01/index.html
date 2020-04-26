@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>React Portuga 01</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
 
@@ -49,17 +51,28 @@
       //   }
       // }
 
-      function CompProps(props){
-        return(
-          <div>
-            <p>Nome: {props.nome}</p>
-            <p>Apelido: {props.apelido}</p>
-          </div>
-        );
-      }
+      // function CompProps(props){
+      //   return(
+      //     <div>
+      //       <p>Nome: {props.nome}</p>
+      //       <p>Apelido: {props.apelido}</p>
+      //     </div>
+      //   );
+      // }
+
+      // class StyleComponent extends React.Component{
+      //   render(){
+      //     return(
+      //       <div className='container has-background-primary'>
+      //         <h1 className='title has-text-white'>Develop Ruby on Rails</h1>
+      //         <h3 className='subtitle has-text-white'>& React Js</h3>
+      //       </div>
+      //     );
+      //   }
+      // }
 
       ReactDOM.render(
-        <CompProps nome='Wendel Lopes' apelido='Develop Man' />,
+        <StyleComponent />,
         root
       );
     </script>

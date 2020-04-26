@@ -76,5 +76,22 @@
 >   root
 > );
 > ```
+
+8. Usando style CSS dentro do React.
+
+> Como o intuito de usar os recursos do 'css' dentro do React não podemos usar a palavra class, pois é uma palavra reservada do React, fazendo-se então necessário a utilização da palavra chave "className".
+>
+> ```jsx
+> class StyleComponent extends React.Component{
+>    render(){
+>       return(
+>          <div className='container has-background-primary'>
+>             <h1 className='title has-text-white'>Develop Ruby on Rails</h1>
+>             <h3 className='subtitle has-text-white'>e React Js</h3>
+>          </div>
+>       );
+>    }
+> }
+> ```
 >
 > 
