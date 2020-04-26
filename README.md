@@ -4,4 +4,5 @@
 1. Conhecendo o React
 2. Configurar o ambiente de estudo
 3. Adicionando os 'scripts CDN react e reactDom' no documento principal
-3. Adicionando o 'babel js' 
+4. Adicionando o 'babel js'
+5. Trabalhando com Function Component
