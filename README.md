@@ -23,7 +23,7 @@
 >
 > 
 
-4. Trabalhando com Function Component
+5. Trabalhando com Function Component
 
 > ```jsx
 > function MeuComponent(){
@@ -37,7 +37,7 @@
 >
 > 
 
-4. Trabalhando com Class Component
+6. Trabalhando com Class Component
 
 > ```jsx
 > class MeuComponent extends React.Component{
@@ -49,3 +49,32 @@
 > }
 > ```
 
+7. Trabalhando com propriedades chamadas de "props" passando parâmetros dentro da função.
+
+> ```jsx
+> // Trabalhando com props dentro de uma function
+> function CompProps(props){
+>    return(
+>      <div>
+>        <p>Nome: {props.nome}</p>
+>        <p>Apelido: {props.apelido}</p>
+>      </div>
+>    );
+> }
+> // Trabalhando com a props dentro de uma Class Component
+> class CompProps extends React.Component{
+>   render(){
+>     <div>
+>       <p>Nome: {Nome: {this.props.nome}}</p>
+>       <p>Apelido: {Apelido: {this.props.apelido}}</p>
+>     </div>
+>   }
+> }
+> 
+> ReactDOM.render(
+>   <CompProps nome='Wendel Lopes' apelido='Develop Man' />,
+>   root
+> );
+> ```
+>
+> 
