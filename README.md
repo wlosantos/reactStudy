@@ -95,3 +95,33 @@
 > ```
 >
 > 
+
+9. Introdução ao conceito de { state } dentro do React, onde podemos definir valores internos dentro de nosso componentes.
+
+> Para a utilização do { state } é necessário que sua declaração seja feita dentro de um { construtor }.
+>
+> ```jsx
+> class App extends React.Component{
+> 
+>   constructor(){
+>     super();
+> 
+>     this.state = {
+>       sistema: 'Linux Pop!',
+>       versao: '20.2.9p'
+>     }
+>   }
+> 
+>   render(){
+>     return(
+>       <div className='container' style={{padding:'20px'}}>
+>         <p>Sistema: {this.state.sistema}</p>
+>         <p>Versão: <small> {this.state.versao} </small></p>
+>       </div>
+>     );
+>   }
+> }
+> ```
+>
+> 
+

@@ -71,8 +71,29 @@
       //   }
       // }
 
+      class App extends React.Component{
+
+        constructor(){
+          super();
+
+          this.state = {
+            sistema: 'Linux Pop!',
+            versao: '20.2.9p'
+          }
+        }
+
+        render(){
+          return(
+            <div className='container' style={{padding:'20px'}}>
+              <p>Sistema: {this.state.sistema}</p>
+              <p>Versão: <small> {this.state.versao} </small></p>
+            </div>
+          );
+        }
+      }
+
       ReactDOM.render(
-        <StyleComponent />,
+        <App />,
         root
       );
     </script>
