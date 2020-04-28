@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Portuga 01</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type='text/babel'>
+
+      class App extends React.Component{
+
+        metodo = (texto) => {
+          console.log(texto);
+        }
+
+        render(){
+          return(
+            <div className='container' style={{padding: '20px'}}>
+              <button className='button is-primary' onClick={() => this.metodo('Olá novo mundo')}>Click Aqui</button>
+            </div>
+          );
+        }
+      }
+
+      // -----------------------------------------
+      ReactDOM.render(
+        <App />,
+        document.getElementById('root')
+      );
+    </script>
+
+  </body>
+</html>

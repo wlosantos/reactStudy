@@ -160,3 +160,23 @@
 >```
 >
 >
+
+11. Simplificação do { Bind }
+
+> ```jsx
+> // Metódo sem o bind ----------------------------
+> metodo(){
+>   console.log('butão acionado!');
+>   this.setState({nome: 'Nadia Nunes dos Santos'})
+> }
+> this.metodo = this.metodo.bind(this) // Código adicionado ao { construct }
+> // ----------------------------------------------
+> 
+> // Metódo com o bind implícito com Arrow Function
+> metodo = () => {
+>   console.log('butão acionado!');
+>   this.setState({nome: 'Nadia Nunes dos Santos'})
+> }
+> ```
+>
+> 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portuga Ex_01</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type='text/babel'>
+    const root = document.getElementById('root');
+
+    class CompNome extends React.Component{
+
+      constructor(props){
+        super(props);
+
+        this.state = {
+          nome: this.props.nomeInicial
+        }
+        this.cmd_click = this.cmd_click.bind(this)
+      }
+
+      cmd_click(){
+        this.setState({nome: this.props.nomeFinal})
+      }
+
+      render(){
+        return(
+          <div>
+            <p>Nome: {this.state.nome}</p>
+            <button className='button is-info' onClick={this.cmd_click}>Alterar</button>
+          </div>
+        );
+      }
+    }
+
+    class App extends React.Component{
+      render(){
+        return(
+          <div className='container' style={{padding: '20px'}}>
+            <h3 className='title'>Exercício React</h3>
+            <hr />
+            <CompNome nomeInicial='Wendel Pai' nomeFinal='Romero Hernandes' />
+            <CompNome nomeInicial='Wendel Filho' nomeFinal='Fernando Barros' />
+            <CompNome nomeInicial='Nadia Nunes' nomeFinal='Maria Joaquina' />
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(
+      <App />,
+      root
+    );
+  </script>
+</body>
+</html>
